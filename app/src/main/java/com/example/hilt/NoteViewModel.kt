@@ -24,6 +24,7 @@ class NoteViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
+            repository.saveNote(Note(0,"Title","Description"))
             _note.value = repository.getNote()
         }
     }
