@@ -8,8 +8,8 @@ import androidx.room.Query
 @Dao
 interface NoteDAO {
     @Query("SELECT * FROM Notes")
-    fun getNote() : List<Note>
+    fun getNote(): List<Note>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(note : Note) : Long
+    fun insert(note: Note): Long
 }
